@@ -28,26 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.btnSupprimer = new System.Windows.Forms.Button();
-            this.TxtQuantite = new System.Windows.Forms.TextBox();
             this.TxtPrix = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.listBoxProduits = new System.Windows.Forms.ListBox();
-            this.listBoxFacture = new System.Windows.Forms.ListBox();
+            this.PriceLabel = new System.Windows.Forms.Label();
+            this.ProductDatagrid = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.NameLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductDatagrid)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(31, 222);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Quantité";
             // 
             // menuStrip1
             // 
@@ -67,7 +57,6 @@
             this.btnAjouter.TabIndex = 3;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = true;
-            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // btnSupprimer
             // 
@@ -78,83 +67,82 @@
             this.btnSupprimer.TabIndex = 4;
             this.btnSupprimer.Text = "Supprimer";
             this.btnSupprimer.UseVisualStyleBackColor = true;
-            this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
-            // 
-            // TxtQuantite
-            // 
-            this.TxtQuantite.Location = new System.Drawing.Point(122, 222);
-            this.TxtQuantite.Name = "TxtQuantite";
-            this.TxtQuantite.Size = new System.Drawing.Size(150, 27);
-            this.TxtQuantite.TabIndex = 1;
             // 
             // TxtPrix
             // 
-            this.TxtPrix.Location = new System.Drawing.Point(122, 307);
+            this.TxtPrix.Location = new System.Drawing.Point(130, 148);
             this.TxtPrix.Name = "TxtPrix";
             this.TxtPrix.Size = new System.Drawing.Size(150, 27);
             this.TxtPrix.TabIndex = 2;
             // 
-            // label3
+            // PriceLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(31, 307);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 20);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Prix :";
+            this.PriceLabel.AutoSize = true;
+            this.PriceLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.PriceLabel.Location = new System.Drawing.Point(39, 148);
+            this.PriceLabel.Name = "PriceLabel";
+            this.PriceLabel.Size = new System.Drawing.Size(44, 20);
+            this.PriceLabel.TabIndex = 10;
+            this.PriceLabel.Text = "Prix :";
             // 
-            // listBoxProduits
+            // ProductDatagrid
             // 
-            this.listBoxProduits.FormattingEnabled = true;
-            this.listBoxProduits.ItemHeight = 20;
-            this.listBoxProduits.Location = new System.Drawing.Point(122, 20);
-            this.listBoxProduits.Name = "listBoxProduits";
-            this.listBoxProduits.Size = new System.Drawing.Size(150, 164);
-            this.listBoxProduits.TabIndex = 12;
-            this.listBoxProduits.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.ProductDatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductDatagrid.Location = new System.Drawing.Point(333, 76);
+            this.ProductDatagrid.MultiSelect = false;
+            this.ProductDatagrid.Name = "ProductDatagrid";
+            this.ProductDatagrid.RowHeadersWidth = 51;
+            this.ProductDatagrid.RowTemplate.Height = 29;
+            this.ProductDatagrid.Size = new System.Drawing.Size(454, 258);
+            this.ProductDatagrid.TabIndex = 11;
             // 
-            // listBoxFacture
+            // textBox1
             // 
-            this.listBoxFacture.FormattingEnabled = true;
-            this.listBoxFacture.ItemHeight = 20;
-            this.listBoxFacture.Location = new System.Drawing.Point(341, 20);
-            this.listBoxFacture.Name = "listBoxFacture";
-            this.listBoxFacture.Size = new System.Drawing.Size(157, 164);
-            this.listBoxFacture.TabIndex = 13;
+            this.textBox1.Location = new System.Drawing.Point(130, 95);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(150, 27);
+            this.textBox1.TabIndex = 12;
+            // 
+            // NameLabel
+            // 
+            this.NameLabel.AutoSize = true;
+            this.NameLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.NameLabel.Location = new System.Drawing.Point(39, 95);
+            this.NameLabel.Name = "NameLabel";
+            this.NameLabel.Size = new System.Drawing.Size(44, 20);
+            this.NameLabel.TabIndex = 13;
+            this.NameLabel.Text = "Nom";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 450);
-            this.Controls.Add(this.listBoxFacture);
-            this.Controls.Add(this.listBoxProduits);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.NameLabel);
+            this.Controls.Add(this.ProductDatagrid);
+            this.Controls.Add(this.PriceLabel);
             this.Controls.Add(this.TxtPrix);
-            this.Controls.Add(this.TxtQuantite);
             this.Controls.Add(this.btnSupprimer);
             this.Controls.Add(this.btnAjouter);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ProductDatagrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private Label label2;
         private MenuStrip menuStrip1;
         private Button btnAjouter;
         private Button btnSupprimer;
-        private TextBox TxtQuantite;
         private TextBox TxtPrix;
-        private Label label3;
-        private ListBox listBoxProduits;
-        private ListBox listBoxFacture;
+        private Label PriceLabel;
+        private DataGridView ProductDatagrid;
+        private TextBox textBox1;
+        private Label NameLabel;
     }
 }
