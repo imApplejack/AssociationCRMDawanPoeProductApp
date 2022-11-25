@@ -30,6 +30,9 @@ namespace ProductManager
 
             FillDataGridProduct();
 
+
+            this.ProductService.RemoveProductById(1);
+
         }
 
 
@@ -39,5 +42,21 @@ namespace ProductManager
             ProductDatagrid.DataSource = ProductService.GetAll();
         }
 
+        private void btnSupprimer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int SelectedIdProduct = (int)this.ProductDatagrid.SelectedRows[0].Cells[2].Value;
+                this.ProductService.RemoveProductById(SelectedIdProduct);
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                FillDataGridProduct();
+            }
+        }
     }
 }
